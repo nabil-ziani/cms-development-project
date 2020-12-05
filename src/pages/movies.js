@@ -81,7 +81,6 @@ const MoviesPage = () => {
           <h2>Our Movies</h2>
           <div className="movie-items">
             {movies.map(({ node: {movie, slug}, i}) => {
-              console.log(slug)
               return (
                 <Movie to={`/${slug}`} key={i}>
                   <Image fluid={movie.cover.imageFile.childImageSharp.fluid} alt={movie.cover.altText} />

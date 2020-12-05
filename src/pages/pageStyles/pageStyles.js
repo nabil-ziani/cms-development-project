@@ -163,8 +163,8 @@ export const Wrapper = styled.div`
 export const Movie = styled(Link)`
   display: flex;
   position: relative;
-  width: 22vw;
-  height: 22vw;
+  width: 21vw;
+  height: auto;
   margin: 2vw;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;

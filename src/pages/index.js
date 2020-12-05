@@ -54,7 +54,7 @@ const IndexPage = () => {
                     sourceUrl
                     imageFile {
                       childImageSharp {
-                        fluid(quality: 100) {
+                        fluid(quality: 100, background: "#000") {
                           ...GatsbyImageSharpFluid_withWebp
                         }
                       }
@@ -93,7 +93,7 @@ const IndexPage = () => {
                 <Image fluid={movie.cover.imageFile.childImageSharp.fluid} altText={movie.cover.altText}/>
                 <div className="movie-info">
                 <p>{movie.title}</p>
-                <p>{`Directed by: ${movie.director}`}</p>
+                <p>{`Released: ${movie.year}`}</p>
                 </div>
               </Movie>
             ))}

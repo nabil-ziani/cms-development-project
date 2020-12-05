@@ -182,7 +182,7 @@ export const Movie = styled(Link)`
       height: 100%;
       background-color: ${COLORS.TERTIARY + "c0"};
 
-      p {
+      p, p:nth-child(2) {
         color: ${COLORS.BLACK};
       }
     }
@@ -210,7 +210,7 @@ export const Movie = styled(Link)`
     }
 
     p:nth-child(2) {
-      color: ${COLORS.SECONDARY};
+      color: ${COLORS.TERTIARY};
 
       margin-top: 0.3rem;
     }

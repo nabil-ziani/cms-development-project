@@ -68,7 +68,7 @@ const IndexPage = () => {
       }
     }
   `)
-
+  console.log(homePageFeaturedMovies)
   return (
     <Layout>
       <SEO title="Home" />
@@ -84,6 +84,20 @@ const IndexPage = () => {
         <div className="description">
           <p>{homePageDescription}</p>
           <BottomEdgeUp color={COLORS.PRIMARY} />
+        </div>
+        <div className="movies">
+          <h2>Featured Movies</h2>
+          <div className="movie-items">
+            {homePageFeaturedMovies.map(({movie, slug}) => (
+              <Movie to={`/${slug}`}>
+                <Image fluid={movie.cover.imageFile.childImageSharp.fluid} altText={movie.cover.altText}/>
+                <div className="movie-info">
+                <p>{movie.title}</p>
+                <p>{`Directed by: ${movie.director}`}</p>
+                </div>
+              </Movie>
+            ))}
+          </div>
         </div>
       </Wrapper>
     </Layout>

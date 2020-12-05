@@ -64,7 +64,6 @@ const MoviesPage = () => {
       }
     }
   `)
-  console.log(moviesPageHeaderPicture);
   return (
     <Layout>
       <SEO title="Movies" />

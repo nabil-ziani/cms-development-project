@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { Wrapper, Image, Movie, BottomEdgeDown, BottomEdgeUp } from '../pageStyles/pageStyles'
 import { COLORS } from '../constants'
 

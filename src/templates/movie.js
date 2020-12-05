@@ -47,16 +47,6 @@ const MovieTemplate = ({data: {wpcontent: {movie: {movie, genres: {edges: genres
             </p>
           </div>
         </div>
-        {/*<div className="movie-pictures">
-          {pictures.map((picture, i) => (
-            <div key={i} className="movie-picture">
-              <Image
-                fluid={picture.imageFile.childImageSharp.fluid}
-                alt={picture.altText}
-              />
-            </div>
-          ))}
-        </div>*/}
       </Wrapper>
     </Layout>
   )

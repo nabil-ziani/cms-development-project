@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
     .movie-image {
       position: relative;
-      width: 40vw;
+      width: 30vw;
       height: 40vw;
 
       @media (max-width: ${MEDIA_QUERIES.MEDIUM}) {

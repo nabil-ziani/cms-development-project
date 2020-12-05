@@ -45,6 +45,7 @@ const MoviesPage = () => {
                 director
                 review
                 cover {
+                  slug
                   altText
                   sourceUrl
                   imageFile {
@@ -55,7 +56,6 @@ const MoviesPage = () => {
                     }
                   }
                   altText
-                  slug
                 }
               }
             }

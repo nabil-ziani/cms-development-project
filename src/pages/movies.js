@@ -36,6 +36,7 @@ const MoviesPage = () => {
         movies {
           edges {
             node {
+              slug
               movie {
                 title
                 language
@@ -45,7 +46,6 @@ const MoviesPage = () => {
                 director
                 review
                 cover {
-                  slug
                   altText
                   sourceUrl
                   imageFile {
@@ -80,15 +80,18 @@ const MoviesPage = () => {
         <div className="movies">
           <h2>Our Movies</h2>
           <div className="movie-items">
-            {movies.map(({ node: { movie, slug } }) => (
-              <Movie to={`/${slug}`} key={slug}>
-                <Image fluid={movie.cover.imageFile.childImageSharp.fluid} alt={movie.cover.altText} />
-                <div className="movie-info">
-                  <p>{movie.title}</p>
-                  <p>{`Released: ${movie.year}`}</p>
-                </div>
-              </Movie>
-            ))}
+            {movies.map(({ node: {movie, slug}, i}) => {
+              console.log(slug)
+              return (
+                <Movie to={`/${slug}`} key={i}>
+                  <Image fluid={movie.cover.imageFile.childImageSharp.fluid} alt={movie.cover.altText} />
+                  <div className="movie-info">
+                    <p>{movie.title}</p>
+                    <p>{`Released: ${movie.year}`}</p>
+                  </div>
+                </Movie>
+              )
+            })}
           </div>
         </div>
       </Wrapper>
